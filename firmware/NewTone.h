@@ -34,11 +34,14 @@
 
 #ifndef NewTone_h
   #define NewTone_h
-
+  #ifdef SPARK
+  #include "application.h"
+  #else
   #if defined(ARDUINO) && ARDUINO >= 100
     #include <Arduino.h>
   #else
     #include <WProgram.h>
+  #endif
   #endif
 
   #if defined(__AVR_ATmega8__) || defined(__AVR_ATmega128__)
